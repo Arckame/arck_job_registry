@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language id="82">
+  <page id="75200" title="Job Registry" descr="Job Registry mod - dialogue and UI text" voice="no">
+    <t id="1">구인 등록부를 확인하고 싶습니다.</t>
+    <t id="2">구인 등록부</t>
+  </page>
+</language>

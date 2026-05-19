@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language id="33">
+  <page id="75200" title="Job Registry" descr="Job Registry mod - dialogue and UI text" voice="no">
+    <t id="1">Je veux consulter le registre des emplois.</t>
+    <t id="2">Registre des emplois</t>
+  </page>
+</language>

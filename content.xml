@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content 
+    id="arck_job_registry"
+    name="ARCK Job Registry"
+    author="Arckame"
+    version="100"
+    date="2026-05-08"
+    save="false"
+    sync="false"
+    enabled="true"
+    description="Adds a dialogue line for station managers allowing access to the job register." 
+>
+    <text language="7"  description="Добавляет строку диалога для менеджеров станций, предоставляющую доступ к реестру вакансий." />
+    <text language="33" description="Ajoute une ligne de dialogue pour les responsables de stations permettant l'accès au registre des emplois." />
+    <text language="34" description="Añade una línea de diálogo para los administradores de estaciones que permite acceder al registro de empleos." />
+    <text language="39" description="Aggiunge una riga di dialogo per i gestori delle stazioni che consente l'accesso al registro dei lavori." />
+    <text language="42" description="Přidává dialogový řádek pro správce stanic umožňující přístup k registru pracovních míst." />
+    <text language="48" description="Dodaje linię dialogową dla menedżerów stacji umożliwiającą dostęp do rejestru ofert pracy." />
+    <text language="49" description="Fügt eine Dialogzeile für Stationsmanager hinzu, die den Zugriff auf das Stellenregister ermöglicht." />
+    <text language="55" description="Adiciona uma linha de diálogo para gerentes de estações permitindo acesso ao registro de empregos." />
+    <text language="81" description="ステーション管理者に求人登録へのアクセスを可能にするダイアログラインを追加します。" />
+    <text language="82" name="구인 등록부" description="스테이션 관리자에게 구인 등록부 접근을 허용하는 대화 라인을 추가합니다." />
+    <text language="86" name="职位登记册" description="为空间站管理员添加一条对话选项，允许访问职位登记册。" />
+    <text language="88" name="職位登記冊" description="為空間站管理員新增一條對話選項，允許存取職位登記冊。" />
+</content>

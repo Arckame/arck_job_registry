@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language id="42">
+  <page id="75200" title="Job Registry" descr="Job Registry mod - dialogue and UI text" voice="no">
+    <t id="1">Chci nahlédnout do registru pracovních míst.</t>
+    <t id="2">Registr pracovních míst</t>
+  </page>
+</language>

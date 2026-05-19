@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language id="88">
+  <page id="75200" title="Job Registry" descr="Job Registry mod - dialogue and UI text" voice="no">
+    <t id="1">我想查看職位登記冊。</t>
+    <t id="2">職位登記冊</t>
+  </page>
+</language>
