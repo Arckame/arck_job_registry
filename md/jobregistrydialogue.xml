@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdscript name="jobRegistryDialogue" debug="true">
   <cues>
-
     <cue name="JR_InjectChoice" instantiate="true" namespace="this">
       <conditions>
         <check_any>
@@ -11,7 +10,6 @@
         <check_value value="typeof event.object == datatype.component and event.object.controlpost == controlpost.manager" />
       </conditions>
       <actions>
-        <debug_text text="'[AJR] InjectChoice OK | event=' + event.name + ' | object=' + event.object" filter="error" />
         <add_player_choice text="{75200, 1}" section="openRegistry" />
       </actions>
     </cue>
@@ -20,15 +18,12 @@
         <event_conversation_next_section section="openRegistry" />
       </conditions>
       <actions>
-        <debug_text text="'[AJR] openRegistry fired | event=' + event.name + ' | object=' + event.object" filter="error" />
         <set_value name="$station" exact="event.object.station" />
-        <debug_text text="'[AJR] station=' + $station + ' isplayerowned=' + $station.isplayerowned" filter="error" />
-        <do_if value="$station"> <!-- and not $station.isplayerowned -->
-          <debug_text text="'[AJR] Opening menu with station=' + $station" filter="error" />
+        <do_if value="$station">
           <open_conversation_menu menu="Arckame_JobRegistry_Menu" param="[$station]" />
         </do_if>
         <do_else>
-          <debug_text text="'[AJR] INFO: station non disponible ou appartenant au joueur, menu non ouvert'" filter="error" />
+          <debug_text text="'[ARCK-JR] ERROR: Cannot find station'" filter="error" />
         </do_else>
       </actions>
     </cue>

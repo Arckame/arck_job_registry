@@ -129,14 +129,14 @@ function menu.createTable(frame, tableProperties, scaledMaxH)
     })
 
     -- Set column widths
-    ftable:setColWidthPercent(1, 30)
+    -- ftable:setColWidthPercent(1, 30)
     ftable:setColWidthPercent(2, 10)
     ftable:setColWidthPercent(3, 10)
     ftable:setColWidthPercent(4, 10)
     ftable:setColWidthPercent(5, 10)
     ftable:setColWidthPercent(6, 10)
     ftable:setColWidthPercent(7, 10)
-    ftable:setColWidthPercent(8, 10)
+    ftable:setColWidthPercent(8, 6)
 
     -- Title (span all columns)
     local row = ftable:addRow(false, {})
@@ -169,7 +169,7 @@ function menu.createTable(frame, tableProperties, scaledMaxH)
         hrow[sc.idx].handlers.onClick = function() onSortColumn(col) end
     end
 
-    hrow[7]:createText("",          { halign = "center", fontsize = Helper.headerFontSize })
+    hrow[8]:createText("",          { halign = "center", fontsize = Helper.headerFontSize })
     
     -- Separator line
     local row = ftable:addRow(false, {})
@@ -203,10 +203,16 @@ function menu.createTable(frame, tableProperties, scaledMaxH)
             row[5]:createText(tostring(Helper.displaySkill(tonumber(p.marine) or 0)), { halign = "center", color = Color["text_skills"] })
             row[6]:createText(tostring(Helper.displaySkill(tonumber(p.service) or 0)), { halign = "center", color = Color["text_skills"] })
             row[7]:createText(tostring(Helper.displaySkill(tonumber(p.moral) or 0)), { halign = "center", color = Color["text_skills"] })
-            row[8]:createButton({}):setText(ReadText(1001, 3312), { halign = "center" })
+            row[8]:createButton({}):setText(ReadText(1010, 4), { halign = "center" })
             row[8].handlers.onClick = function()
-                C.SetGuidance(pUID, ffi.new("UIPosRot"))
-                menu.onCloseElement("back", true)
+                -- I keep the guidance code, just in case
+                -- C.SetGuidance(pUID, ffi.new("UIPosRot"))
+                -- menu.onCloseElement("back", true)
+            
+                -- This is the first try, was not working because thi is a subconversation, not a new conversation
+                -- Helper.closeMenuForNewConversation(menu, "default", pUID, nil, true)
+                Helper.closeMenuForSubConversation(menu, "default", pUID, nil)
+                menu.cleanup()
             end
         end
     end
@@ -225,7 +231,6 @@ end
 
 -- On show menu trigger
 function menu.onShowMenu()
-    DebugError("[ARCK-JR] onShowMenu called, param[1]=" .. tostring(menu.param and menu.param[1]))
     loadPersonnel()
     menu.createInfoFrame()
 end
@@ -266,8 +271,6 @@ local function init()
     table.insert(Menus, menu)
     if Helper then
         Helper.registerMenu(menu)
-    else
-        DebugError("[ARCK-JR] ERROR: Helper is nil at init!")
     end
 end
 
